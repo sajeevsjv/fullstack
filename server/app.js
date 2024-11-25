@@ -6,6 +6,9 @@ dotenv.config();
 const mongoConnect = require('./db/connect');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const https = require("https");
+const fs = require("fs");
+const path = require("path");
 
 app.use(cors()); // Enable CORS for all routes
 app.get('/test', (req, res) => {
@@ -13,7 +16,8 @@ app.get('/test', (req, res) => {
 });
 
 //Serving static files
-app.use(express.static( "../client"));
+// app.use(express.static( "../client"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use("/upload",express.static("./upload"));
 
 //Database connection
@@ -31,6 +35,15 @@ app.use(userRoutes);
 //authRoutes
 app.use(authRoutes);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server running at http://localhost:${process.env.PORT}`);
-});
+
+
+// app.listen(process.env.PORT, () => {
+//     console.log(`Server running at http://localhost:${process.env.PORT}`);
+// });
+
+https.createServer({
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem'),
+  }, app).listen(process.env.PORT, () => {
+    console.log(`listening on port https://localhost:${process.env.PORT}`);
+  });
