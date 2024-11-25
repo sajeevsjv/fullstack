@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+/* body{
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+
+} */
+
+/* index.html */
+nav{
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+nav a:hover{
+    color: blue;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    height: 100%;
+
+}
+.form-container{
+    display: flex;
+    width: 70%;
+    animation: a1 0.3s ease-out 0s 1 forwards alternate;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+@keyframes a1 {
+    from{
+       opacity: 0;
+       transform: translateY(-100px)
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+form{
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    gap: 14px;
+    border: none;
+
+}
+form input,textarea {
+    width: 90%;
+    border: 1px solid rgb(190, 190, 190);
+    outline: none;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+    letter-spacing: 1px;
+}
+textarea::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+    letter-spacing: 1px;
+}
+.login-txt{
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #851AFE;
+    font-weight: 700;
+}
+.img-section{
+    width: 50%;
+    background-image: url("./Pages/images/blue_bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+.img-section span{
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    
+
+}
+.pass{
+    width: 90%;
+    text-align: center;
+}
+.forgot-pass{
+    font-size: 12px;
+    width: 100%;
+    color: blue;
+
+}
+.line{
+    position: relative;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(196, 196, 196);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    top: 0;
+}
+.or{
+    position: absolute;
+    top: -8px;
+    text-align: center;
+    width: 100%;
+   
+
+}
+.or span{
+    background-color: rgb(255, 255, 255);
+    padding: 6px;
+    font-size: 12px;
+    color: gray;
+}
+.signup-txt{
+    width: 90%;
+    text-align: center;
+}
+.signup-txt a,span{
+    font-size: 12px;
+    color: gray;
+    
+}
+.signup-txt a{
+    color: blue;
+}
+
+/* From Uiverse.io by alexroumi */ 
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    width: 90%;
+    border: unset;
+    border-radius: 5px;
+    color: #e8e8e8;
+    z-index: 1;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    background: #000000;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+   ion-icon{
+    font-size: 24px;
+   }
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+.clienterr{
+    color: red;
+    padding: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+}
+
+
+
+table,td{
+    /* border: 2px solid black; */
+    margin: auto;
+    padding: 8px;
+    height: 15px;
+    width: 60vw;
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+    
+}
+table tr{
+  border: 1px solid rgb(0, 68, 255);
+}
+
+.table-container{
+    padding: 50px;
+}
+
+.btn-div{
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+.text-div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.text-div-email{
+    color: gray;
+    padding: 0;
+    margin: 0;
+}
+
+
+.muted{
+    color: rgba(128, 128, 128, 0.562);
+    font-size: 11px;
+}
+#viewuser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+img{
+    width: 100%;
+}
+.img-div{
+    width: 200px;
+}
+.container1{
+    border: 1px solid rgb(49, 142, 248);
+    max-width: 34%;
+    padding: 18px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 8px;
+    margin-top: 80px;   
+    animation: a1 0.3s ease-out 0s 1 forwards alternate;
+
+
+}
+
+@keyframes a1 {
+    from{
+       opacity: 0;
+       transform: translateY(-100px)
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
